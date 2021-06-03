@@ -4,7 +4,10 @@ import { Select } from "antd";
 const { Option } = Select;
 const OptionEditor = ({ handleChangeTheme, handleChangeLanguage, handleChangeFontsize }) => {
   return (
-    <div className="w-28 flex flex-col">
+    <div
+      className="w-28 flex flex-col 
+  "
+    >
       <p>Mode:</p>
       <Select defaultValue="javascript" className="w-full" onChange={handleChangeLanguage}>
         <Option className="" value="css">

@@ -12,13 +12,13 @@ import "ace-builds/src-noconflict/theme-dracula";
 import "ace-builds/src-noconflict/theme-nord_dark";
 // import "ace-builds";
 
-const Editor = ({ theme, language, fontsize }) => {
+const Editor = ({ theme, language, fontsize, valueEditor }) => {
   const onChange = (newValue) => {
     console.log("change", newValue);
   };
-  console.log(language);
+  console.log("valueEditor", valueEditor);
   return (
-    <div className="w-2/5 min-h-full-h-full">
+    <div className="w-2/5 min-h-full ">
       <AceEditor
         className="w-full h-full "
         height="800px"
@@ -35,7 +35,8 @@ const Editor = ({ theme, language, fontsize }) => {
           enableSnippets: true,
           tabSize: 2,
         }}
-        defaultValue={"let number=5\nconsole.log(number)"}
+        // defaultValue={"let number=5\nconsole.log(number)"}
+        // defaultValue={"let number=5\nconsole.log(number)"}
         // setOptions={{
         //   enableBasicAutocompletion: true,
         //   enableLiveAutocompletion: true,
@@ -43,6 +44,7 @@ const Editor = ({ theme, language, fontsize }) => {
         //   showLineNumbers: true,
 
         // }}
+        value={valueEditor}
       />
     </div>
   );
