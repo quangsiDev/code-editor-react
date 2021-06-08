@@ -24,14 +24,19 @@ function App() {
     setValueEditor(value);
   }
   return (
-    <div className="bg-gray-300 p-10 flex justify-between w-screen min-h-screen">
+    <div className="bg-gray-900 p-10 flex justify-between w-screen min-h-screen">
       <OptionEditor
         handleChangeTheme={handleChangeTheme}
         handleChangeLanguage={handleChangeLanguage}
         handleChangeFontsize={handleChangeFontsize}
       />
-      <InputText handleChangeValueEditor={handleChangeValueEditor} />
-      <Editor theme={theme} language={language} fontsize={fontsize} valueEditor={valueEditor} />
+      {/* <InputText handleChangeValueEditor={handleChangeValueEditor} /> */}
+      <Editor
+        theme={theme}
+        language={language}
+        fontsize={fontsize}
+        valueEditor={valueEditor}
+      />
     </div>
   );
 }
